@@ -1,0 +1,35 @@
+#Hyperparameter Notes
+LR:
+-LR of 0.001: very slow, val accuracy stalled at 2.5% after ~10 epochs
+-LR of 0.01 [Current]: seems good, gets to 15-20% in ~20 epochs, ~24% in ~100 epochs
+-LR of 0.1: Too high, bounces around
+
+Batch Size:
+-Batch Size of 4:
+-Batch Size of 16:
+-Batch Size of 32:
+-Batch Size of 64 [Current]:
+
+#Model Notes
+Layers:
+-Linear [Current]:
+-Softmax (re-test): broke everything
+-Batch norm (untested):
+-Ave pool (untested):
+-Max pool (untested) [Current]:
+
+#Image Transform Notes
+All:
+-Resize 500*500: slow
+-Resize 256*256 [Current]: quicker, no difference in accuracy
+Train:
+-Random rotation        \
+-Random horizontal flip  | - [Current]: Brought train, val, and test acc closer together, 
+-Colour jitter           |             increased test acc
+-Shuffle True           /
+Val:
+-No transform
+-Shuffel False [Current]: Don't shuffle so only change is the model
+Test:
+-No transform
+-Shuffel False [Current]: Don't shuffle so only change is the model
