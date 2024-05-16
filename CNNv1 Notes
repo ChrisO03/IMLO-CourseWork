@@ -23,13 +23,25 @@ All:
 -Resize 500*500: slow
 -Resize 256*256 [Current]: quicker, no difference in accuracy
 Train:
--Random rotation        \
--Random horizontal flip  | - [Current]: Brought train, val, and test acc closer together, 
--Colour jitter           |             increased test acc
--Shuffle True           /
+-RandomRotation        \
+-RandomHorizontalFlip  | - [Current]: Brought train, val, and test acc closer together, 
+-ColourJitter          /              increased test acc 
+-GaussianBlur
+-RandomAffine
+-RandomAdjustSharpness
+-RandomAutocontrast
+-RandomPerspective
+-TrivialAugment
+-RandAugment
+-Shuffle True
 Val:
 -No transform
 -Shuffel False [Current]: Don't shuffle so only change is the model
 Test:
 -No transform
 -Shuffel False [Current]: Don't shuffle so only change is the model
+
+#Loss and Optimiser Notes
+Optimiser:
+-SGD: 
+-Adam [Current]: Seems to increase accuracy more stabily
