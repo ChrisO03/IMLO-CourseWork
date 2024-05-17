@@ -36,11 +36,12 @@ Train:
 -RandomRotation        	\
 -RandomHorizontalFlip  	| - [Current]: Brought train, val, and test acc closer together, 
 -ColourJitter          	|              increased test acc 
+-RandomVerticalFlip	|
 -GaussianBlur	       	|
 -RandomAdjustSharpness 	|
--RandomPerspective	|
--TrivialAugment		|
--RandAugment		/
+-RandomPerspective	/
+-TrivialAugment: Worse than above transforms put together	
+-RandAugment		
 -RandomAutocontrast: Doesn't work
 -RandomAffine: Doesn't work
 -Shuffle True
@@ -57,7 +58,7 @@ Optimiser:
 -Adam [Current]: Seems to increase accuracy more stabily
 
 Best:
-Test Acc - 29.51%
+Test Acc - 26.07%
 
 #Hyperparameters
 lr = 0.00005 
