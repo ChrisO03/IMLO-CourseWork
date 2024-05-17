@@ -10,6 +10,7 @@ WD:
 -WD of 0.01: No Change
 -WD of 0.05: Some change, no gain
 -WD of 0.1: Some change, no gain
+-WD of 0.2: Probs too high, train for more epochs to test
 
 
 Batch Size:
