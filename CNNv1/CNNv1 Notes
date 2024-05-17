@@ -5,6 +5,11 @@ LR:
 -LR of 0.01: Too high for Adam
 -LR of 0.1: Too high, bounces around
 
+WD:
+-WD of 0: Best so far
+-WD of 0.01 [Current]: No Change
+
+
 Batch Size:
 -Batch Size of 4:
 -Batch Size of 16:
