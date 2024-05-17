@@ -7,7 +7,9 @@ LR:
 
 WD:
 -WD of 0: Best so far
--WD of 0.01 [Current]: No Change
+-WD of 0.01: No Change
+-WD of 0.05: Some change, no gain
+-WD of 0.1: Some change, no gain
 
 
 Batch Size:
