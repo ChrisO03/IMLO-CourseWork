@@ -1,7 +1,8 @@
 #Hyperparameter Notes
 LR:
--LR of 0.001: very slow, val accuracy stalled at 2.5% after ~10 epochs
--LR of 0.01 [Current]: seems good, gets to 15-20% in ~20 epochs, ~24% in ~100 epochs
+-LR of 0.0005 [Current]: Becoming more accurate
+-LR of 0.001: Too high for Adam
+-LR of 0.01: Too high for Adam
 -LR of 0.1: Too high, bounces around
 
 Batch Size:
@@ -23,16 +24,16 @@ All:
 -Resize 500*500: slow
 -Resize 256*256 [Current]: quicker, no difference in accuracy
 Train:
--RandomRotation        \
--RandomHorizontalFlip  | - [Current]: Brought train, val, and test acc closer together, 
--ColourJitter          /              increased test acc 
--GaussianBlur
--RandomAffine
--RandomAdjustSharpness
--RandomAutocontrast
--RandomPerspective
--TrivialAugment
--RandAugment
+-RandomRotation        	\
+-RandomHorizontalFlip  	| - [Current]: Brought train, val, and test acc closer together, 
+-ColourJitter          	|              increased test acc 
+-GaussianBlur	       	|
+-RandomAdjustSharpness 	|
+-RandomPerspective	|
+-TrivialAugment		|
+-RandAugment		/
+-RandomAutocontrast: Doesn't work
+-RandomAffine: Doesn't work
 -Shuffle True
 Val:
 -No transform
@@ -45,3 +46,16 @@ Test:
 Optimiser:
 -SGD: 
 -Adam [Current]: Seems to increase accuracy more stabily
+
+Best:
+Test Acc - 29.31%
+
+#Hyperparameters
+lr = 0.0001 #Drop this down, too high
+momentum = 0 #default = 0
+weight_decay = 0 #default = 0
+dampening = 0 #default = 0
+
+#Other
+batch_size = 64
+epochs = 25
