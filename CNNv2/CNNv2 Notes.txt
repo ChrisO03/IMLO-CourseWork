@@ -24,7 +24,7 @@ Batch Size:
 Layers:
 -Linear [Current]:
 -Softmax (re-test): broke everything
--Batch norm (untested):
+-Batch norm [Current]: Good?
 -Ave pool (untested):
 -Max pool (untested) [Current]:
 
@@ -58,14 +58,14 @@ Optimiser:
 -Adam [Current]: Seems to increase accuracy more stabily
 
 Best:
-Test Acc - 28.02%
+Test Acc - 22.75%
 
 #Hyperparameters
-lr = 0.00005 
-momentum = 0 #default = 0
-weight_decay = 0.05 #default = 0
-dampening = 0 #default = 0
+lr = 0.00005
+momentum = 0
+weight_decay = 0.05
+dampening = 0
 
-#Other
+#Print Other
 batch_size = 64
-epochs = 100
+epochs = 10
