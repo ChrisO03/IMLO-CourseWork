@@ -58,7 +58,7 @@ Optimiser:
 -Adam [Current]: Seems to increase accuracy more stabily
 
 Best:
-Test Acc - 22.75%
+Test Acc - 30.35%
 
 #Hyperparameters
 lr = 0.00005
@@ -66,6 +66,6 @@ momentum = 0
 weight_decay = 0.05
 dampening = 0
 
-#Print Other
+#Other
 batch_size = 64
-epochs = 10
+epochs = 50
