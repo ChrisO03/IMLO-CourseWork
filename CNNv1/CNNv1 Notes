@@ -58,7 +58,7 @@ Optimiser:
 -Adam [Current]: Seems to increase accuracy more stabily
 
 Best:
-Test Acc - 26.07%
+Test Acc - 28.02%
 
 #Hyperparameters
 lr = 0.00005 
@@ -68,4 +68,4 @@ dampening = 0 #default = 0
 
 #Other
 batch_size = 64
-epochs = 50
+epochs = 100

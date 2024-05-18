@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=CNNv1TestJob         # Job name
+#SBATCH --nodes=1                       # Number of nodes
+#SBATCH --ntasks=1                      # Number of MPI tasks to request
+#SBATCH --cpus-per-task=1               # Number of CPU cores per MPI task
+#SBATCH --mem=16G                       # Total memory to request
+#SBATCH --time=0-08:00:00               # Time limit (DD-HH:MM:SS)
+#SBATCH --account=cs-imlo-2024          # Project account to use
+#SBATCH --mail-type=END,FAIL            # Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=co788@york.ac.uk    # Where to send mail
+#SBATCH --output=%x-%j.log              # Standard output log
+#SBATCH --error=%x-%j.err               # Standard error log
+#SBATCH --partition=gpu                 # Which partition to use
+#SBATCH --gres=gpu:1                    # Generic resources required per node
+
+# Abort if any command fails
+set -e
+
+# Purge any previously loaded modules
+module purge
+
+# Load modules
+module load Python/3.11.3-GCCcore-12.3.0
+module load PyTorch/2.1.2-foss-2023a-CUDA-12.1.1
+module load torchvision/0.16.2-foss-2023a-CUDA-12.1.1
+module load SciPy-bundle/2023.07-gfbf-2023a
+module load matplotlib/3.7.2-gfbf-2023a
+
+# Commands to run
+python flowers102classificationcnnv1.py
