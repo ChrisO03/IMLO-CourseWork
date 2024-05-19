@@ -58,7 +58,7 @@ Optimiser:
 -Adam [Current]: Seems to increase accuracy more stabily
 
 Best:
-Test Acc - 37.76%
+Test Acc - 45.21%
 
 #Hyperparameters
 lr = 0.00005
