@@ -30,8 +30,8 @@ weight_decay = 0.05 #default = 0
 dampening = 0 #default = 0
 
 #Other
-batch_size = 64
-epochs = 75
+batch_size = 32
+epochs = 100
 
 transforms = {
     'train':
@@ -126,7 +126,7 @@ class CNNv2(nn.Module):
                   out_channels=hidden_units,
                   kernel_size=3, #Size of the kernel it looks at
                   stride=1, #How far it steps between kernels
-                  padding=1), #Added to the edges to stop the miage decreasing in size
+                  padding=1), #Added to the edges to stop the image decreasing in size
         nn.BatchNorm2d(hidden_units),
         nn.ReLU(),
         nn.Conv2d(in_channels=hidden_units,
@@ -304,3 +304,5 @@ print(hist)
 #Stops Google stealing my credits
 #runtime.unassign()
 
+#histVik = {}
+#pltHist(histVik)
