@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#SBATCH --job-name=CNNv1TestJob         # Job name
+#SBATCH --job-name=CNNv2TestJob         # Job name
 #SBATCH --nodes=1                       # Number of nodes
 #SBATCH --ntasks=1                      # Number of MPI tasks to request
 #SBATCH --cpus-per-task=1               # Number of CPU cores per MPI task
@@ -10,7 +10,7 @@
 #SBATCH --mail-user=co788@york.ac.uk    # Where to send mail
 #SBATCH --output=%x-%j.log              # Standard output log
 #SBATCH --error=%x-%j.err               # Standard error log
-#SBATCH --partition=gpu                 # Which partition to use
+#SBATCH --partition=gpuplus             # Which partition to use
 #SBATCH --gres=gpu:1                    # Generic resources required per node
 
 # Abort if any command fails

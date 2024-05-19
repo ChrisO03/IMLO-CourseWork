@@ -9,7 +9,7 @@ LR:
 WD:
 -WD of 0: Best so far
 -WD of 0.01: No Change
--WD of 0.05: Some change, no gain
+-WD of 0.05 [Current]: Some change, no gain
 -WD of 0.1: Some change, no gain
 -WD of 0.2: Probs too high, train for more epochs to test
 
@@ -18,7 +18,7 @@ Batch Size:
 -Batch Size of 4:
 -Batch Size of 16:
 -Batch Size of 32:
--Batch Size of 64 [Current]:
+-Batch Size of 64 [Current]: Possibly too large, takes too much ram
 
 #Model Notes
 Layers:
@@ -58,7 +58,7 @@ Optimiser:
 -Adam [Current]: Seems to increase accuracy more stabily
 
 Best:
-Test Acc - 30.35%
+Test Acc - 37.55%
 
 #Hyperparameters
 lr = 0.00005
@@ -68,4 +68,5 @@ dampening = 0
 
 #Other
 batch_size = 64
-epochs = 50
+epochs = 75
+

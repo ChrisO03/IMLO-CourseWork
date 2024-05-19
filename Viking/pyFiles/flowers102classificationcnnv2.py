@@ -31,7 +31,7 @@ dampening = 0 #default = 0
 
 #Other
 batch_size = 64
-epochs = 50
+epochs = 75
 
 transforms = {
     'train':
@@ -158,13 +158,13 @@ class CNNv2(nn.Module):
     self.classifier = nn.Sequential(
         nn.Flatten(),
         nn.Linear(in_features=hidden_units*64*64,
-                  out_features=output_shape)#,
-        #nn.ReLU(),
-        #nn.Linear(in_features=hidden_units*32*32,
-        #          out_features=hidden_units*16*16),
-        #nn.ReLU(),
-        #nn.Linear(in_features=hidden_units*16*16,
-        #          out_features=output_shape)
+                  out_features=1024),
+        nn.ReLU(),
+        nn.Linear(in_features=1024,
+                  out_features=512),
+        nn.ReLU(),
+        nn.Linear(in_features=512,
+                  out_features=output_shape)
 
     )
 
