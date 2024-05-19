@@ -1,0 +1,72 @@
+#Hyperparameter Notes
+LR:
+-LR of 0.00005 [Current]: not much change
+-LR of 0.0005: Becoming more accurate
+-LR of 0.001: Too high for Adam
+-LR of 0.01: Too high for Adam
+-LR of 0.1: Too high, bounces around
+
+WD:
+-WD of 0: Best so far
+-WD of 0.01: No Change
+-WD of 0.05 [Current]: Some change, no gain
+-WD of 0.1: Some change, no gain
+-WD of 0.2: Probs too high, train for more epochs to test
+
+
+Batch Size:
+-Batch Size of 4:
+-Batch Size of 16:
+-Batch Size of 32:
+-Batch Size of 64 [Current]: Possibly too large, takes too much ram
+
+#Model Notes
+Layers:
+-Linear [Current]:
+-Softmax (re-test): broke everything
+-Batch norm [Current]: Good?
+-Ave pool (untested):
+-Max pool (untested) [Current]:
+
+#Image Transform Notes
+All:
+-Resize 500*500: slow
+-Resize 256*256 [Current]: quicker, no difference in accuracy
+Train:
+-RandomRotation        	\
+-RandomHorizontalFlip  	| - [Current]: Brought train, val, and test acc closer together, 
+-ColourJitter          	|              increased test acc 
+-RandomVerticalFlip	|
+-GaussianBlur	       	|
+-RandomAdjustSharpness 	|
+-RandomPerspective	/
+-TrivialAugment: Worse than above transforms put together	
+-RandAugment		
+-RandomAutocontrast: Doesn't work
+-RandomAffine: Doesn't work
+-Shuffle True
+Val:
+-No transform
+-Shuffel False [Current]: Don't shuffle so only change is the model
+Test:
+-No transform
+-Shuffel False [Current]: Don't shuffle so only change is the model
+
+#Loss and Optimiser Notes
+Optimiser:
+-SGD: 
+-Adam [Current]: Seems to increase accuracy more stabily
+
+Best:
+Test Acc - 37.76%
+
+#Hyperparameters
+lr = 0.00005
+momentum = 0
+weight_decay = 0.05
+dampening = 0
+
+#Other
+batch_size = 16
+epochs = 100
+
