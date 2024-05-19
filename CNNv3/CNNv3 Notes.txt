@@ -1,5 +1,6 @@
 #Hyperparameter Notes
 LR:
+-LR of 0.00001:
 -LR of 0.00005 [Current]: not much change
 -LR of 0.0005: Becoming more accurate
 -LR of 0.001: Too high for Adam
@@ -58,7 +59,7 @@ Optimiser:
 -Adam [Current]: Seems to increase accuracy more stabily
 
 Best:
-Test Acc - 37.76%
+Test Acc - 41.42%
 
 #Hyperparameters
 lr = 0.00005
@@ -69,4 +70,5 @@ dampening = 0
 #Other
 batch_size = 16
 epochs = 100
+
 
