@@ -28,6 +28,7 @@ Layers:
 -Batch norm [Current]: Good?
 -Ave pool (untested):
 -Max pool (untested) [Current]:
+-Hidden Layer Size of 256 [Current]: better than 102
 
 #Image Transform Notes
 All:
@@ -59,16 +60,16 @@ Optimiser:
 -Adam [Current]: Seems to increase accuracy more stabily
 
 Best:
-Test Acc - 42.61%
+Test Acc - 52.38%
 
 #Hyperparameters
-lr = 0.00005
+lr = 0.00001
 momentum = 0
 weight_decay = 0.05
 dampening = 0
 
 #Other
 batch_size = 16
-epochs = 100
+epochs = 200
 
 

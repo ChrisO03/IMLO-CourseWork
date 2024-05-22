@@ -38,7 +38,7 @@ transforms = {
     #Composing several transforms together
     transforms.Compose(
         [
-            transforms.RandomRotation(degrees=15),
+            transforms.RandomRotation(degrees=45),
             transforms.RandomHorizontalFlip(),
             transforms.RandomVerticalFlip(),
             transforms.ColorJitter(),
@@ -171,7 +171,7 @@ class CNNv3(nn.Module):
     return x
 
 model = CNNv3(input_shape=3,
-              hidden_units=102,
+              hidden_units=256,
               output_shape=102).to(device)
 print(model)
 
