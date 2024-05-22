@@ -59,8 +59,8 @@ Optimiser:
 -SGD: 
 -Adam [Current]: Seems to increase accuracy more stabily
 
-Best:
-Test Acc - 52.38%
+Best: bnFul
+Test Acc - 54.03%
 
 #Hyperparameters
 lr = 0.00001
